@@ -1,12 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-const int MaxN = 200005;
+const int maxn = 200005;
 
-vector<int> adj[MaxN];
-vector<pair<int, int>> q[MaxN];
-int ans[MaxN];
-bool visited[MaxN];
+vector<int> adj[maxn];
+vector<pair<int, int>> q[maxn];
+int ans[maxn];
+bool visited[maxn];
 
 void dfs(int u, int par, int xor_val)
 {
