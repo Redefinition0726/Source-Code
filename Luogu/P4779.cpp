@@ -43,7 +43,7 @@ void dijkstra(int x, int len)
         int to = link[x][i];
         if (!f[to])
         {
-            answer[i] = link[x][i]
+            answer[i] = link[x][i];
         }
     }
 }
@@ -56,7 +56,7 @@ int main()
         link[x].push_back(len);
         link[y].push_back(len);
     }
-    dijkstra(start);
+    dijkstra(start, 0);
     for (int i = 1; i <= n; i++)
     {
         printf("%d ", answer[i]);
