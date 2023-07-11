@@ -26,13 +26,16 @@ const int MaxN = 1e5 + 5;
 const int MaxM = 2e5 + 5;
 int n, m;
 int start;
-std::vector link[MaxN];
+int x, y, len;
+std::vector<int> link[MaxN];
 int main()
 {
     scanf("%d%d", &n, &m);
     for (int i = 1; i <= m; i++)
     {
-        scanf("%d%d%d", &link[i].x, &link[i].y, &link[i].len);
+        scanf("%d%d%d", &x, &y, &len);
+        link[x].push_back(len);
+        link[y].push_back(len);
     }
     return 0;
 }
