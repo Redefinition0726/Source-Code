@@ -44,6 +44,7 @@ void dijkstra(int x, int len)
         if (!f[to])
         {
             answer[i] = link[x][i];
+            bfs.push(link[x][i]);
         }
     }
 }
