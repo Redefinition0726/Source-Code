@@ -28,12 +28,24 @@ struct str
     int x;
     int time;
 };
-int n;
+int n, k;
 int p[MaxN];
+int max[MaxN];
+int min[MaxN];
 std::priority_queue<str> queue;
 int main()
 {
     scanf("%d", &n);
-
+    for (int i = 1; i <= n; i++)
+    {
+        scanf("%d", &p[i]);
+    }
+    for (int i = 1; i <= n; i++)
+    {
+        str tmp;
+        tmp.x = p[i];
+        tmp.time = i;
+        queue.push(tmp);
+    }
     return 0;
 }
