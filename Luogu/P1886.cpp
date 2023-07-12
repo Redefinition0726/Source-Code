@@ -25,10 +25,12 @@ const int inf = 0x3f3f3f3f;
 const int MaxN = 1e5 + 5;
 struct str
 {
+    int x;
+    int time;
 };
 int n;
 int p[MaxN];
-std::priority_queue<int> queue;
+std::priority_queue<str> queue;
 int main()
 {
     scanf("%d", &n);
