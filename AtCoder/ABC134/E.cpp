@@ -22,7 +22,18 @@
 #define debug printf("Debug\n")
 typedef long long ll;
 const int inf = 0x3f3f3f3f;
+const int MaxN = 1e5 + 5;
+int n;
+int ans;
+int p[MaxN];
 int main()
 {
+    scanf("%d", &n);
+    for (int i = 1; i <= n; i++)
+    {
+        scanf("%d", &p[i]);
+    }
+
+    printf("%d\n", ans);
     return 0;
 }
