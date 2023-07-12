@@ -22,7 +22,10 @@
 #define debug printf("Debug\n")
 typedef long long ll;
 const int inf = 0x3f3f3f3f;
+int a;
 int main()
 {
+    scanf("%d", &a);
+    printf("%d\n", 3 * (a * a));
     return 0;
 }

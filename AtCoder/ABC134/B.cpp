@@ -22,7 +22,10 @@
 #define debug printf("Debug\n")
 typedef long long ll;
 const int inf = 0x3f3f3f3f;
+int n, d;
 int main()
 {
+    scanf("%d%d", &n, &d);
+    printf("%d\n", n / (2 * d) + (n % (2 * d) == 0 ? 0 : 1));
     return 0;
 }
