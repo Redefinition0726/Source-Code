@@ -26,6 +26,6 @@ int n, d;
 int main()
 {
     scanf("%d%d", &n, &d);
-    printf("%d\n", n / (2 * d) + (n % (2 * d) == 0 ? 0 : 1));
+    printf("%d\n", n / (2 * d + 1) + (n % (2 * d + 1) == 0 ? 0 : 1));
     return 0;
 }
