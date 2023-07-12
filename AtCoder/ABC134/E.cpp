@@ -24,7 +24,9 @@ typedef long long ll;
 const int inf = 0x3f3f3f3f;
 const int MaxN = 1e5 + 5;
 int n;
+int cnt;
 int p[MaxN];
+int max[MaxN];
 int main()
 {
     scanf("%d", &n);
@@ -32,5 +34,38 @@ int main()
     {
         scanf("%d", &p[i]);
     }
+    cnt = 1;
+    max[1] = p[1];
+    for (int i = 2; i <= n; i++)
+    {
+        int l, r;
+        int ret, mid;
+        l = 1;
+        r = cnt;
+        ret = -1;
+        for (; l <= r;)
+        {
+            mid = (l + r) >> 1;
+            if (max[mid] < p[i])
+            {
+                r = mid - 1;
+                ret = mid;
+            }
+            else
+            {
+                l = mid + 1;
+            }
+        }
+        if (ret == -1)
+        {
+            cnt++;
+            max[cnt] = p[i];
+        }
+        else
+        {
+            max[ret] = p[i];
+        }
+    }
+    printf("%d\n", cnt);
     return 0;
 }
