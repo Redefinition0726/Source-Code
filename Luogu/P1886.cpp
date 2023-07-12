@@ -23,7 +23,15 @@
 typedef long long ll;
 const int inf = 0x3f3f3f3f;
 const int MaxN = 1e5 + 5;
+struct str
+{
+};
+int n;
+int p[MaxN];
+std::priority_queue<int> queue;
 int main()
 {
+    scanf("%d", &n);
+
     return 0;
 }
